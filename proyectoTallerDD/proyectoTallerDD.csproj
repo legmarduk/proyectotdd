@@ -69,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\forms\home.aspx" />
+    <Content Include="app\Images\back.png" />
+    <Content Include="app\Images\back2.png" />
+    <Content Include="app\Images\banner.png" />
+    <Content Include="app\Images\maxresdefault.jpg" />
+    <Content Include="app\Styles\paguno.css" />
+    <Content Include="app\Styles\styleMenu.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
