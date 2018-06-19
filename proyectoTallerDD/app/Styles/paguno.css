@@ -45,15 +45,9 @@
     margin-bottom: 10%;
 }
 
-placehold {
-    margin-top: 20px;
-    height: 200px;
-    width: 100%;
-    background-color: lightcyan;
-    opacity: 0.3;
-    filter: alpha(opacity=30);
-    border-style: solid;
-    border-width: 2px;
-    border-color: dimgray;
-    border-radius: 8px;
+plubli {
+    margin-top: 10%;
+    color: white;
+    text-align: justify;
+    text-shadow: -2px -2px 4px #000;
 }
