@@ -68,7 +68,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\forms\crearacceso.aspx" />
     <Content Include="app\forms\home.aspx" />
+    <Content Include="app\forms\login.aspx" />
+    <Content Include="app\forms\perfilestudiante.aspx" />
     <Content Include="app\Images\back.png" />
     <Content Include="app\Images\back2.png" />
     <Content Include="app\Images\banner.png" />
@@ -78,12 +81,33 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\forms\crearacceso.aspx.cs">
+      <DependentUpon>crearacceso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\crearacceso.aspx.designer.cs">
+      <DependentUpon>crearacceso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\forms\home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="app\forms\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\forms\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\forms\perfilestudiante.aspx.cs">
+      <DependentUpon>perfilestudiante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\perfilestudiante.aspx.designer.cs">
+      <DependentUpon>perfilestudiante.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
