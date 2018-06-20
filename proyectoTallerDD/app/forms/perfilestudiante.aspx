@@ -30,65 +30,62 @@
 			<div class="col-md-6"> <!--seccion izquierda-->
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Nombre</label>
-					<input type="text" name="nombre" class="form-control">					
+					<asp:TextBox id="nombreE" runat="server" CssClass="form-control"/>				
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Paterno</label>
-					<input type="text" name="apellidop"  class="form-control">
+					<asp:TextBox id="aprellidoPaternoE" runat="server" CssClass="form-control"/>		
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Materno</label>
-					<input type="text" name="apellidom" class="form-control">
+					<asp:TextBox id="apellodoMaternoE" runat="server" CssClass="form-control"/>		
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-address-card"></i> Rut</label>
-					<input type="text" name="rut" class="form-control">
+					<asp:TextBox id="rutEstudiante" runat="server" CssClass="form-control"/>		
 				</div>
-				
+				<!-- combo -->
                 <div class="form-group">
-
-                        <div class="divCombo" id="divCombo">
-                            <select id="SelectInt" class="form-control form-control-md">
-                                    <option value="0" selected> Seleccione Area De Interes</option>
-                                    <option value="1"> Desarrollo Web</option>
-                                    <option value="2"> Java</option>
-                                    <option value="3"> php</option>
-                            </select>
-
-                        </div>
+                    <asp:DropDownList runat="server"  class="form-control form-control-md" id="seleccionArea">
+                        <asp:ListItem Text="Seleccione Area De Interes" Value="" />
+                        <asp:ListItem Text="Desarrollo Web" Value="1" />
+                        <asp:ListItem Text="Java" Value="2" />
+                        <asp:ListItem Text="php" Value="2" />
+                    </asp:DropDownList>
                 </div>
-
 			</div>
 
 			<div class="col-md-6"><!--seccion derecha-->
 				
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-envelope"></i> Email</label>
-					<input type="text" name="mail" class="form-control">
+					<asp:TextBox id="emailEstudiante" runat="server" CssClass="form-control"/>		
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-phone-square"></i> Telefono</label>
-					<input type="text" name="telefono" class="form-control">
+					<asp:TextBox id="telefonoEstudiante" runat="server" CssClass="form-control"/>		
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-home"></i> direccion</label>
-					<input type="text" name="direccion" class="form-control">
+					<asp:TextBox id="direccionEstudiante" runat="server" CssClass="form-control"/>		
 				</div>
 				
 				<div class="form-group">
 					<label><i class="fas fa-comment-alt"></i> Comentario</label>
-					<textarea rows="3" cols="74" class="form-control"></textarea>
+					<asp:TextBox id="comentarioEstudiante" runat="server" CssClass="form-control" Height="100px" />	
+                     		
 				</div>
 
 			</div>
 
-            <div class="col-md-12" align="center" >
-                <button type="button" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button>
+            <div class="col-md-12 d-flex justify-content-around" >
+
+                <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" />
             </div>
 
 		</div>

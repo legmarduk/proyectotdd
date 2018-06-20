@@ -25,7 +25,7 @@
         <h1>LOGIN</h1>
     </div>
     <br />
-    <form id="form1" runat="server">
+    <form  runat="server" method="post" id="formlogin" action="">
          <div class="asd container">
       
         <div class="row panelCreacion" >
@@ -38,8 +38,8 @@
                     <div class="d-flex justify-content-around">
                         <label><i class="fas fa-user"></i> Usuario</label>
                     </div>
-                   
-                    <input type="text" name="usuario" class="form-control" id="nombreUsuario"/>
+                   <asp:TextBox id="nombreUsuario" runat="server" CssClass="form-control"/>
+                    <!--<input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control" id="nombreUsuario"/>-->
                 </div> 
                 
                 <div class="form-group"><!-- datos de contraseña-->
@@ -47,7 +47,8 @@
                     <div class="d-flex justify-content-around">
                     <label><i class="fas fa-key"></i> Contraseña</label>
                         </div>
-                    <input type="password" name="pass" class="form-control"id="passwordUsuario"/>
+                     <asp:TextBox id="passwordUsuario" runat="server" TextMode="Password" CssClass="form-control" />
+                    <!--<input type="password" name="passwordUsuario" id="passwordUsuario" class="form-control"id="passwordUsuario"/>-->
                 </div>
               
                 <!--boton para crear el perfil-->
@@ -55,8 +56,9 @@
                 <div class="col-md-12" >
                     <br />
                     <div class="d-flex justify-content-around">
-                    <button type="button" class="btn btn-outline-success" id="botonInciarSesion">
-                        <i class="fas fa-door-open"></i> Iniciar Sesion</button>
+                   <!-- <button type="button" class="btn btn-outline-success" id="botonInciarSesion"  runat="server" OnClick="logearUsuario">
+                        <i class="fas fa-door-open"></i> Iniciar Sesion</button>-->
+                         <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" OnClick="logearUsuario"/>
                     </div>
                 </div>
 

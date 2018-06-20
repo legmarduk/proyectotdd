@@ -37,7 +37,8 @@
                     <div class="d-flex justify-content-around">
                         <label><i class="fas fa-user"></i> Usuario</label>
                     </div>
-                    <input type="text" name="usuario" class="form-control"/>
+                    <asp:TextBox id="nombreUsuario" runat="server" CssClass="form-control"/>
+                    
                 </div> 
                 
                 <div class="form-group"><!-- datos de contraseña-->
@@ -45,25 +46,27 @@
                     <div class="d-flex justify-content-around">
                         <label><i class="fas fa-key"></i> Contraseña</label>
                     </div>
-                    <input type="password" name="pass" class="form-control"/>
+                    <asp:TextBox id="passwordUsuario" runat="server" CssClass="form-control"/>
+                    
                 </div>
                 <!--radio para seleccionar tipo de cuenta-->
                 
                 <div class="form-group">
                     <br />
                     <div class="d-flex justify-content-around">
-                        <div class="form-check form-check-inline">
-                                <label class="form-check-label"><input class="form-check-input"
-                                    type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Empresa"><i class="fas fa-industry"></i> Empresa
-                                </label>
+                       <div class="form-check form-check-inline">
+                           <i class="fas fa-industry"></i><asp:RadioButton  text="Empresa" value="1" runat="server"/>
+                                
                         </div>
                         <div class="form-check form-check-inline">
-                                <label class="form-check-label"><input class="form-check-input"
-                                    type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Practicante"><i class="fas fa-hands-helping"></i> Practicante
-                                </label>
+                          <i class="fas fa-hands-helping"></i><asp:RadioButton  text=" Practicante" value="2" runat="server"/>
+                                
                         </div>
+                      
+                      
                      </div>
                 </div>
+               
                 <!--boton para crear el perfil-->
                 
                 <div class="col-md-12" >
