@@ -25,6 +25,7 @@
 
 
     <form id="form1" runat="server">
+        <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
          <div class="asd container">
       
         <div class="row panelCreacion" >
@@ -38,7 +39,9 @@
                         <label><i class="fas fa-user"></i> Usuario</label>
                     </div>
                     <asp:TextBox id="nombreUsuario" runat="server" CssClass="form-control"/>
-                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="nombreUsuario"
+                         ErrorMessage="Usuario es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+
                 </div> 
                 
                 <div class="form-group"><!-- datos de contraseña-->
@@ -48,6 +51,8 @@
                     </div>
                     <asp:TextBox id="passwordUsuario" runat="server" CssClass="form-control" TextMode="Password"/>
                     
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="passwordUsuario"
+                         ErrorMessage="Usuario es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
                 </div>
                 <!--radio para seleccionar tipo de cuenta-->
                 
@@ -60,7 +65,8 @@
                                 <asp:ListItem Text="" Value="2"><i class="fas fa-hands-helping"> Practicante</asp:ListItem> 
                                 
                         </asp:RadioButtonList>
-                                
+                           <asp:RequiredFieldValidator runat="server" ControlToValidate="seleccionCuenta"
+                                    ErrorMessage="Tipo de Cuenta es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
                         </div>
                       
                      </div>

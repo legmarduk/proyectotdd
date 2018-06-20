@@ -26,6 +26,7 @@
     </div>
     <br />
     <form  runat="server" method="post" id="formlogin">
+         <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
          <div class="asd container">
       
         <div class="row panelCreacion" >
@@ -39,16 +40,22 @@
                         <label><i class="fas fa-user"></i> Usuario</label>
                     </div>
                    <asp:TextBox id="nombreUsuario" runat="server" CssClass="form-control"/>
-                    <!--<input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control" id="nombreUsuario"/>-->
+                   
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="nombreUsuario"
+                         ErrorMessage="Usuario es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+                  
                 </div> 
                 
                 <div class="form-group"><!-- datos de contraseña-->
                     <br />
-                    <div class="d-flex justify-content-around">
-                    <label><i class="fas fa-key"></i> Contraseña</label>
+                        <div class="d-flex justify-content-around">
+                            <label><i class="fas fa-key"></i> Contraseña</label>
                         </div>
                      <asp:TextBox id="passwordUsuario" runat="server" TextMode="Password" CssClass="form-control" />
-                    <!--<input type="password" name="passwordUsuario" id="passwordUsuario" class="form-control"id="passwordUsuario"/>-->
+                       
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="passwordUsuario"
+                            ErrorMessage="Password es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+
                 </div>
               
                 <!--boton para crear el perfil-->

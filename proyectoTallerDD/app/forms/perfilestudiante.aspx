@@ -23,29 +23,46 @@
      <div class="d-flex justify-content-around">
           <h1>DATOS ESTUDIANTE</h1>
      </div>
+
+
     <br />
     <form id="form1" runat="server">
+            <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
         <div class="container">
 		<div class="row panelForm">
 			<div class="col-md-6"> <!--seccion izquierda-->
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Nombre</label>
-					<asp:TextBox id="nombreE" runat="server" CssClass="form-control"/>				
+					<asp:TextBox id="nombreE" runat="server" CssClass="form-control"/>
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="nombreE"
+                                ErrorMessage="Nombre es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Paterno</label>
-					<asp:TextBox id="aprellidoPaternoE" runat="server" CssClass="form-control"/>		
+					<asp:TextBox id="aprellidoPaternoE" runat="server" CssClass="form-control"/>
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="aprellidoPaternoE"
+                                ErrorMessage="Apellido paterno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>   
+
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Materno</label>
-					<asp:TextBox id="apellodoMaternoE" runat="server" CssClass="form-control"/>		
+					<asp:TextBox id="apellodoMaternoE" runat="server" CssClass="form-control"/>
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="apellodoMaternoE"
+                               ErrorMessage="Apellido materno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>   
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-address-card"></i> Rut</label>
-					<asp:TextBox id="rutEstudiante" runat="server" CssClass="form-control"/>		
+					<asp:TextBox id="rutEstudiante" runat="server" CssClass="form-control" />	
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="rutEstudiante"
+                               ErrorMessage="Rut es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>  
+
 				</div>
 				<!-- combo -->
                 <div class="form-group">
@@ -62,17 +79,26 @@
 				
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-envelope"></i> Email</label>
-					<asp:TextBox id="emailEstudiante" runat="server" CssClass="form-control"/>		
+					<asp:TextBox id="emailEstudiante" runat="server" CssClass="form-control" TextMode="Email"/>
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="emailEstudiante"
+                               ErrorMessage="Email es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator> 
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-phone-square"></i> Telefono</label>
-					<asp:TextBox id="telefonoEstudiante" runat="server" CssClass="form-control"/>		
+					<asp:TextBox id="telefonoEstudiante" runat="server" CssClass="form-control" TextMode="Phone"/>
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="telefonoEstudiante"
+                               ErrorMessage="Telefono es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator> 
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-home"></i> direccion</label>
-					<asp:TextBox id="direccionEstudiante" runat="server" CssClass="form-control"/>		
+					<asp:TextBox id="direccionEstudiante" runat="server" CssClass="form-control"/>
+                    
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="direccionEstudiante"
+                               ErrorMessage="Direccion es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator> 
 				</div>
 				
 				<div class="form-group">
