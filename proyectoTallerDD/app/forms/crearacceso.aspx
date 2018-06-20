@@ -46,7 +46,7 @@
                     <div class="d-flex justify-content-around">
                         <label><i class="fas fa-key"></i> Contraseña</label>
                     </div>
-                    <asp:TextBox id="passwordUsuario" runat="server" CssClass="form-control"/>
+                    <asp:TextBox id="passwordUsuario" runat="server" CssClass="form-control" TextMode="Password"/>
                     
                 </div>
                 <!--radio para seleccionar tipo de cuenta-->
@@ -55,14 +55,13 @@
                     <br />
                     <div class="d-flex justify-content-around">
                        <div class="form-check form-check-inline">
-                           <i class="fas fa-industry"></i><asp:RadioButton  text="Empresa" value="1" runat="server"/>
+                           <asp:RadioButtonList ID="seleccionCuenta" runat="server"> 
+                                <asp:ListItem Text="" Value="1"> <i class="fas fa-industry"> Empresa</asp:ListItem> 
+                                <asp:ListItem Text="" Value="2"><i class="fas fa-hands-helping"> Practicante</asp:ListItem> 
+                                
+                        </asp:RadioButtonList>
                                 
                         </div>
-                        <div class="form-check form-check-inline">
-                          <i class="fas fa-hands-helping"></i><asp:RadioButton  text=" Practicante" value="2" runat="server"/>
-                                
-                        </div>
-                      
                       
                      </div>
                 </div>
@@ -72,7 +71,8 @@
                 <div class="col-md-12" >
                     <br />
                     <div class="d-flex justify-content-around">
-                        <button type="button" class="btn btn-outline-success"><i class="fas fa-save"></i> Guardar</button>
+                        
+                        <asp:Button  ID="enviarForm" runat="server" Text="Crear Cuenta" CssClass="btn btn-outline-success" OnClick="crearAcceso"/>
                     </div>
                 </div>
 

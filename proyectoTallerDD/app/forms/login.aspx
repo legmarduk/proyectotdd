@@ -25,7 +25,7 @@
         <h1>LOGIN</h1>
     </div>
     <br />
-    <form  runat="server" method="post" id="formlogin" action="">
+    <form  runat="server" method="post" id="formlogin">
          <div class="asd container">
       
         <div class="row panelCreacion" >
