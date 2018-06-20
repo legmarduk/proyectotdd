@@ -68,9 +68,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\forms\buscar.aspx" />
     <Content Include="app\forms\crearacceso.aspx" />
     <Content Include="app\forms\home.aspx" />
     <Content Include="app\forms\login.aspx" />
+    <Content Include="app\forms\menu.aspx" />
     <Content Include="app\forms\perfilestudiante.aspx" />
     <Content Include="app\Images\back.png" />
     <Content Include="app\Images\back2.png" />
@@ -81,6 +83,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\forms\buscar.aspx.cs">
+      <DependentUpon>buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\buscar.aspx.designer.cs">
+      <DependentUpon>buscar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="app\forms\crearacceso.aspx.cs">
       <DependentUpon>crearacceso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -101,6 +110,13 @@
     </Compile>
     <Compile Include="app\forms\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\forms\menu.aspx.cs">
+      <DependentUpon>menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\menu.aspx.designer.cs">
+      <DependentUpon>menu.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\forms\perfilestudiante.aspx.cs">
       <DependentUpon>perfilestudiante.aspx</DependentUpon>

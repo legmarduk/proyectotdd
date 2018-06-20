@@ -21,6 +21,14 @@
     <div class="inner">
         <a href="home.aspx" class="logo"><i class="fas fa-hands-helping"></i> Practicando.cl</a>
     </div>    
+    <div class="btn-group">
+         <button type="button" class="btn  btn-dark btn-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+            aria-expanded="false">ENTRAR</button>
+         <div class="dropdown-menu accionMenu">
+             <a class="dropdown-item " href="crearacceso.aspx">Registrar Usuario</a>
+             <a class="dropdown-item" href="login.aspx">Login</a>
+         </div>
+    </div>
     </header>
     <div class="fondo">
     <div class="container">
@@ -33,7 +41,7 @@
                 <h2 class="titulo2">Empresas</h2>
                 <p class="pr">Si quieres publicar tu aviso hazlo facil ingresa acá y publica en 3 simples pasos, logea, llena tu perfil y publica</p>
                 <div class="boton" align="center">
-                    <button class="btn btn-dark"><i class="fab fa-hotjar"></i> Publica AQUI</button>
+                    <a href="login.aspx"  class="btn btn-dark"><i class="fab fa-hotjar"></i> Publica AQUI</a>
                 </div>
                 </div>
             </div>
@@ -42,30 +50,27 @@
                 <h2 class="titulo2">Estudiante</h2>
                 <p class="pr">Si andas perdido y buscas un lugar de practicas apreta acá, logea y busca lo que se acomoda a tu perfil.</p>
                 <div class="boton" align="center">
-                    <button class="btn btn-dark"><i class="fas fa-search"></i> Buscar</button>
+                    <a href="login.aspx" class="btn btn-dark"><i class="fas fa-search"></i> Buscar</a>
                 </div>
             </div>
             <div class="col-sm-1"></div>
         </div>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
-        <br />
-        <h1>HOLA</h1>
+        <div class="row d-flex justify-content-around">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="../Images/banner.png" alt="HOLA 1" />
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="../Images/banner.png" alt="HOLA 2" />
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="../Images/banner.png" alt="HOLA 3" />
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
-</div>
-
     </form>
 </body>
 </html>
