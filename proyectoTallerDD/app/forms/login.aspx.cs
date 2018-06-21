@@ -32,7 +32,7 @@ namespace proyectoTallerDD.app.forms
            
             if (temp != 0)
             {
-
+               
                 Session["identificador"] = temp;
                 Response.Redirect("menu.aspx");
 

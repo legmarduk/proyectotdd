@@ -14,6 +14,7 @@ namespace proyectoTallerDD.app.forms
 
             int idConectada = (int)Session["identificador"];
 
+
            // Response.Write(idConectada);
 
             // Response.Write("<script>alert('ERROR en los Datos',"+idConectada")</script>");

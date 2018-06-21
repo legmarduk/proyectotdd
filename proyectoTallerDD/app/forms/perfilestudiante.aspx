@@ -26,7 +26,7 @@
 
 
     <br />
-    <form id="form1" runat="server">
+    <form id="form1"  runat="server" method="post">
             <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
         <div class="container">
 		<div class="row panelForm">
@@ -41,18 +41,18 @@
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Paterno</label>
-					<asp:TextBox id="aprellidoPaternoE" runat="server" CssClass="form-control"/>
+					<asp:TextBox id="apellidoPaternoE" runat="server" CssClass="form-control"/>
                     
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="aprellidoPaternoE"
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="apellidoPaternoE"
                                 ErrorMessage="Apellido paterno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>   
 
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Materno</label>
-					<asp:TextBox id="apellodoMaternoE" runat="server" CssClass="form-control"/>
+					<asp:TextBox id="apellidoMaternoE" runat="server" CssClass="form-control"/>
                     
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="apellodoMaternoE"
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="apellidoMaternoE"
                                ErrorMessage="Apellido materno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>   
 				</div>
 
@@ -120,7 +120,7 @@
 
             <div class="col-md-12 d-flex justify-content-around" >
 
-                <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" />
+                <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" OnClick="ModificarPerfilEstudiante" />
             </div>
 
 		</div>

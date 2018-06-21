@@ -1,4 +1,4 @@
-﻿ALTER PROCEDURE dbo.LogearUsuario(@usuario varchar(50),@password varchar(50))
+ALTER PROCEDURE dbo.LogearUsuario(@usuario varchar(50),@password varchar(50))
 as 
 BEGIN 
 		if exists (SELECT TOP 1 1 FROM Usuarios where nombre_usuario = @usuario)
@@ -68,24 +68,37 @@ SELECT * FROM Estudiantes
 
 /*--------------------------------------------*/
 
-CREATE dbo.EditarPerfilEstudiante(@nombre varchar(50),@apellidoP varchar(50),@apellidoM varchar(50),
-	@rut varchar(20),@email varchar(30),@telefono int, @dirEstudiante varchar(50),@habEstudiante varchar(50),@id_carrera int,@id_usuario int)
+CREATE PROCEDURE dbo.EditarPerfilEstudiante(@nombre varchar(50),@apellidoP varchar(50),@apellidoM varchar(50),
+	@rut varchar(20),@email varchar(30),@telefono int, @dirEstudiante varchar(50),@habEstudiante varchar(50),
+	@id_carrera int,@id_usuario int)
 
 as
 BEGIN 
 		if exists (SELECT TOP 1 1 FROM Estudiantes where id_usuario = @id_usuario)
 		BEGIN 
-			UPDATE Estudiantes SET nombre_estudiante = @nombre, apellido_p = @apellidoP,apellido_a =@apellido_a,
+			UPDATE Estudiantes SET nombre_estudiante = @nombre, apellido_p = @apellidoP,apellido_a =@apellidoM,
 			rut_estudiante = @rut,email_estudiante = @email, fono_estudiante = @telefono, dir_estudiante = @dirEstudiante,
-			 hab_estudiante = @habEstudiante, id_carrera =@id_carrera WHERE id_usuario = @id_usuario;
+			hab_estudiante = @habEstudiante, id_carrera = @id_carrera WHERE id_usuario = @id_usuario;
+
 
 			select 1;
 			return 1;
 		END
 
-		ELSE{
-			select 0;
-			return 0;
-		}
+		ELSE
+			BEGIN
+				select 0;
+				return 0;
+			END
 END
+/*------------ obtener datos del estudiante-------*/
 
+create procedure dbo.listar_usuario(@id_usuario int)
+as
+begin
+	if exists (SELECT TOP 1 1 FROM Estudiantes where id_usuario = @id_usuario)
+	begin
+		select nombre_estudiante, apellido_p, apellido_a, rut_estudiante, email_estudiante, fono_estudiante, dir_estudiante, hab_estudiante, id_carrera
+		from Estudiantes where @id_usuario = id_usuario
+	end
+end

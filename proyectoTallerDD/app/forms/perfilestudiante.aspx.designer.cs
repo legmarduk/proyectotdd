@@ -31,22 +31,22 @@ namespace proyectoTallerDD.app.forms {
         protected global::System.Web.UI.WebControls.TextBox nombreE;
         
         /// <summary>
-        /// Control aprellidoPaternoE.
+        /// Control apellidoPaternoE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox aprellidoPaternoE;
+        protected global::System.Web.UI.WebControls.TextBox apellidoPaternoE;
         
         /// <summary>
-        /// Control apellodoMaternoE.
+        /// Control apellidoMaternoE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox apellodoMaternoE;
+        protected global::System.Web.UI.WebControls.TextBox apellidoMaternoE;
         
         /// <summary>
         /// Control rutEstudiante.
