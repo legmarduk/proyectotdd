@@ -64,14 +64,23 @@
                                ErrorMessage="Rut es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>  
 
 				</div>
-				<!-- combo -->
+				<!-- combo interes -->
                 <div class="form-group">
                     <asp:DropDownList runat="server"  class="form-control form-control-md" id="seleccionArea">
-                        <asp:ListItem Text="Seleccione Area De Interes" Value="" />
+                        <asp:ListItem Text="Seleccione Area De Interes" Value="" Selected="True"/>
                         <asp:ListItem Text="Desarrollo Web" Value="1" />
                         <asp:ListItem Text="Java" Value="2" />
                         <asp:ListItem Text="php" Value="2" />
                     </asp:DropDownList>
+                </div>
+              <!-- combo interes -->
+                <div class="form-group">
+                    
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre_carrera" DataValueField="id_carrera" CssClass="form-control">
+                             
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:practicadbConnectionString %>" SelectCommand="SELECT [id_carrera], [nombre_carrera] FROM [Carreras]"></asp:SqlDataSource>
+                    
                 </div>
 			</div>
 

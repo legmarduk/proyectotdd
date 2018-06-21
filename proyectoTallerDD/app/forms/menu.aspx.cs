@@ -12,6 +12,15 @@ namespace proyectoTallerDD.app.forms
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            int idConectada = (int)Session["identificador"];
+
+           // Response.Write(idConectada);
+
+            // Response.Write("<script>alert('ERROR en los Datos',"+idConectada")</script>");
+            
+            
         }
+
+
     }
 }

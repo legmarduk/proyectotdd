@@ -63,9 +63,9 @@
                 <div class="col-md-12" >
                     <br />
                     <div class="d-flex justify-content-around">
-                   <!-- <button type="button" class="btn btn-outline-success" id="botonInciarSesion"  runat="server" OnClick="logearUsuario">
-                        <i class="fas fa-door-open"></i> Iniciar Sesion</button>-->
+
                          <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" OnClick="logearUsuario"/>
+                         
                     </div>
                 </div>
 

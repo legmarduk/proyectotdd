@@ -36,10 +36,12 @@ namespace proyectoTallerDD.app.forms
                 int respuesta = Convert.ToInt32(com.ExecuteScalar().ToString());
                 if (respuesta == 1)
                 {
-                    Response.Redirect("menu.aspx");
+                    //Response.Write("<script>alert('Acceso Creado Correctamente')</script>");
+                    Response.Redirect("login.aspx",true);
                 }
                 else {
-                    Response.Redirect("crearacceso.aspx");
+                    Response.Write("<script>alert('Error Al Crear El Acceso')</script>");
+                    //Response.Redirect("crearacceso.aspx",false);
                 }
             }
         }

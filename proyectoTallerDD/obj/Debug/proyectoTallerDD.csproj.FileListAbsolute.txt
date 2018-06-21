@@ -172,3 +172,14 @@ C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\roslyn\VBCSCompi
 C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\obj\Debug\proyectoTallerDD.csproj.CopyComplete
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\Newtonsoft.Json.dll
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\System.Net.Http.Formatting.dll
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\System.Web.Http.dll
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\System.Web.Http.WebHost.dll
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\Newtonsoft.Json.xml
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\System.Net.Http.Formatting.xml
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\System.Web.Http.xml
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\System.Web.Http.WebHost.xml
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\es\System.Net.Http.Formatting.resources.dll
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\es\System.Web.Http.resources.dll
+C:\Users\acer\Desktop\git\tddp\proyectotdd\proyectoTallerDD\bin\es\System.Web.Http.WebHost.resources.dll
