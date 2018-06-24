@@ -12,14 +12,14 @@ namespace proyectoTallerDD.app.forms
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            int idConectada = (int)Session["identificador"];
+            /*try catch*/
+            try {
+                int idConectada = (int)Session["identificador"];
+            }
+            catch (Exception error) {
+                Response.Redirect("login.aspx");
+            }
 
-
-           // Response.Write(idConectada);
-
-            // Response.Write("<script>alert('ERROR en los Datos',"+idConectada")</script>");
-            
-            
         }
 
 

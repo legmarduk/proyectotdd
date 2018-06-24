@@ -14,18 +14,31 @@ namespace proyectoTallerDD.app.forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int idConectada = (int)Session["identificador"];
+            /*try catch*/
+            try
+            {
+                int idConectada = (int)Session["identificador"];
 
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conexionDB"].ConnectionString);
-            conn.Open();
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conexionDB"].ConnectionString);
+                conn.Open();
 
-            String sql = "EXEC dbo.listar_usuario" + "'" + idConectada + "'";
-            SqlCommand com = new SqlCommand(sql, conn);
+                String sql = "EXEC dbo.listar_usuario" + "'" + idConectada + "'";
 
-            Response.Write(sql);
-            Response.Write(com);
+                SqlCommand com = new SqlCommand(sql, conn);
 
-            conn.Close();
+                //Response.Write(sql);
+                //Response.Write(com);
+
+                conn.Close();
+
+            }
+            catch (Exception error)
+            {
+                Response.Redirect("login.aspx");
+            }
+
+
+            
 
         }
 

@@ -102,3 +102,20 @@ begin
 		from Estudiantes where @id_usuario = id_usuario
 	end
 end
+
+CREATE PROCEDURE dbo.listar_usuario(@id_usuario int)
+as
+BEGIN 
+	DECLARE @DatosUsuario String(max)
+	/*if exists (SELECT TOP 1 1 FROM Estudiantes where id_usuario = @id_usuario)
+	BEGIN*/
+
+		SET @DatosUsuario = (SELECT nombre_estudiante,apellido_p, apellido_a, rut_estudiante,email_estudiante,fono_estudiante,
+			dir_estudiante,hab_estudiante,id_carrera FROM Estudiantes where id_usuario = @id_usuario);
+
+
+		SELECT @DatosUsuario;
+		return @DatosUsuario;
+	/*END*/
+
+END

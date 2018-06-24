@@ -33,7 +33,7 @@ namespace proyectoTallerDD.app.forms
             if (temp != 0)
             {
                
-                Session["identificador"] = temp;
+                Session["identificador"] = temp;/*aca se crea la variable de sesion*/
                 Response.Redirect("menu.aspx");
 
                 //FormsAuthentication.RedirectFromLoginPage(nombreUsuario.Text, false);
