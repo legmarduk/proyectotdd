@@ -28,7 +28,8 @@
     <form  runat="server" method="post" id="formlogin">
          <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
          <div class="asd container">
-      
+       <div class="card">
+                <div class="card-body">
         <div class="row panelCreacion" >
             <div class="col-3"></div><!-- panel vacio para centrar-->
             <br />
@@ -72,8 +73,8 @@
             </div>
             
         </div>
-           
-
+       </div>    
+    </div>
     </div>
     </form>
 </body>

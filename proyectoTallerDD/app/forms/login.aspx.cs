@@ -27,18 +27,15 @@ namespace proyectoTallerDD.app.forms
             SqlCommand com = new SqlCommand(sql, conn);
             int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
 
-            
+                           
             conn.Close();
            
             if (temp != 0)
             {
-               
                 Session["identificador"] = temp;/*aca se crea la variable de sesion*/
                 Response.Redirect("menu.aspx");
 
                 //FormsAuthentication.RedirectFromLoginPage(nombreUsuario.Text, false);
-
-
             }
             else
             {

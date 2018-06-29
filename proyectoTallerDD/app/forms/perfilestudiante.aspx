@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link href="../Styles/styleMenu.css" rel="stylesheet" />
 
+
+
+
 </head>
 <body>
     <header id="header">
@@ -20,28 +23,34 @@
         <a href="home.aspx" class="logo"><i class="fas fa-hands-helping"></i> Practicando.cl</a>
     </div>    
     </header>
+
+
+    <form id="form1"  runat="server" method="post" a>
+            
+       
+
      <div class="d-flex justify-content-around">
           <h1>DATOS ESTUDIANTE</h1>
+                    
      </div>
 
 
+
     <br />
-    <form id="form1"  runat="server" method="post">
             <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
         <div class="container">
 		<div class="row panelForm">
 			<div class="col-md-6"> <!--seccion izquierda-->
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Nombre</label>
-					<asp:TextBox id="nombreE" runat="server" CssClass="form-control"/>
-                    
+					<asp:TextBox id="nombreE" runat="server" CssClass="form-control"   />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="nombreE"
                                 ErrorMessage="Nombre es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
 				</div>
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Paterno</label>
-					<asp:TextBox id="apellidoPaternoE" runat="server" CssClass="form-control"/>
+					<asp:TextBox id="apellidoPaternoE" runat="server" CssClass="form-control"  />
                     
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="apellidoPaternoE"
                                 ErrorMessage="Apellido paterno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>   
@@ -50,7 +59,7 @@
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Apellido Materno</label>
-					<asp:TextBox id="apellidoMaternoE" runat="server" CssClass="form-control"/>
+					<asp:TextBox id="apellidoMaternoE" runat="server" CssClass="form-control"  />
                     
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="apellidoMaternoE"
                                ErrorMessage="Apellido materno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>   
@@ -58,7 +67,7 @@
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-address-card"></i> Rut</label>
-					<asp:TextBox id="rutEstudiante" runat="server" CssClass="form-control" />	
+					<asp:TextBox id="rutEstudiante" runat="server" CssClass="form-control"  />	
                     
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="rutEstudiante"
                                ErrorMessage="Rut es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>  
@@ -76,10 +85,9 @@
               <!-- combo interes -->
                 <div class="form-group">
                     
-                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre_carrera" DataValueField="id_carrera" CssClass="form-control">
-                             
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="nombre_carrera" DataValueField="id_carrera" class="form-control form-control-md">
                     </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:practicadbConnectionString %>" SelectCommand="SELECT [id_carrera], [nombre_carrera] FROM [Carreras]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:practicadbConnectionString %>" SelectCommand="SELECT [nombre_carrera], [id_carrera] FROM [Carreras]"></asp:SqlDataSource>
                     
                 </div>
 			</div>
@@ -88,7 +96,7 @@
 				
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-envelope"></i> Email</label>
-					<asp:TextBox id="emailEstudiante" runat="server" CssClass="form-control" TextMode="Email"/>
+					<asp:TextBox id="emailEstudiante" runat="server" CssClass="form-control" TextMode="Email"  />
                     
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="emailEstudiante"
                                ErrorMessage="Email es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator> 
@@ -96,7 +104,7 @@
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-phone-square"></i> Telefono</label>
-					<asp:TextBox id="telefonoEstudiante" runat="server" CssClass="form-control" TextMode="Phone"/>
+					<asp:TextBox id="telefonoEstudiante" runat="server" CssClass="form-control" TextMode="Phone"  />
                     
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="telefonoEstudiante"
                                ErrorMessage="Telefono es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator> 
@@ -104,7 +112,7 @@
 
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-home"></i> direccion</label>
-					<asp:TextBox id="direccionEstudiante" runat="server" CssClass="form-control"/>
+					<asp:TextBox id="direccionEstudiante" runat="server" CssClass="form-control"  />
                     
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="direccionEstudiante"
                                ErrorMessage="Direccion es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator> 
@@ -112,7 +120,8 @@
 				
 				<div class="form-group">
 					<label><i class="fas fa-comment-alt"></i> Comentario</label>
-					<asp:TextBox id="comentarioEstudiante" runat="server" CssClass="form-control" Height="100px" />	
+					<asp:TextBox id="comentarioEstudiante" runat="server" CssClass="form-control" Height="100px"
+                         TextMode="MultiLine" />	
                      		
 				</div>
 
@@ -120,13 +129,15 @@
 
             <div class="col-md-12 d-flex justify-content-around" >
 
-                <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" OnClick="ModificarPerfilEstudiante" />
+               <asp:Button  ID="enviarForm" runat="server" Text="Ingresar" CssClass="btn btn-success" OnClick="ModificarPerfilEstudiante" />
+
             </div>
 
 		</div>
 		
 	</div>
-
+        <asp:HiddenField runat="server" ID="session" ></asp:HiddenField>
     </form>
 </body>
+
 </html>

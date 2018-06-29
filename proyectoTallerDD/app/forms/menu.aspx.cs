@@ -22,6 +22,9 @@ namespace proyectoTallerDD.app.forms
 
         }
 
-
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("test.aspx");
+        }
     }
 }

@@ -36,7 +36,9 @@
         <h1 class="titulohead">Bienvenido, ¿Que Buscas?</h1>
         <br />
         <div class="row">
-            <div class="col-sm-1"></div>
+            <div class="col-sm-1">
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+            </div>
             <div class="col-sm-4">
                 <div>
                 <h2 class="titulo2">Empresas</h2>
