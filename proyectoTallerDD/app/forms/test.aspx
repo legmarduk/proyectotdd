@@ -11,43 +11,63 @@
     <form id="form1" runat="server">
         <div>
             <asp:HiddenField ID="aaaaa" runat="server" />
-            <asp:FormView ID="FormView1" runat="server" CellPadding="3" DataKeyNames="id_estudiante" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellSpacing="1">
+            <asp:FormView ID="FormView1" runat="server" CellPadding="3" DataKeyNames="id_estudiante" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" CellSpacing="1" DefaultMode="Edit">
                 <EditItemTemplate>
-                    id_estudiante:
-                    <asp:Label ID="id_estudianteLabel1" runat="server" Text='<%# Eval("id_estudiante") %>' />
+                    <asp:HiddenField ID="id_estudianteLabel1" runat="server" Value='<%# Eval("id_estudiante") %>' />
+                    
                     <br />
-                    nombre_estudiante:
-                    <asp:TextBox ID="nombre_estudianteTextBox" runat="server" Enabled='<%# Eval("nombre_estudiante") %>' Text='<%# Eval("id_estudiante") %>' />
+                    <div class="row">
+                    <label class="lab col-sm-3"><i class="fas fa-user"></i>Nombre Estudiante:</label>
+                    <asp:TextBox ID="nombre_estudianteTextBox" CssClass="col-sm-3" runat="server" Enabled='<%# Eval("nombre_estudiante") %>' Text='<%# Eval("id_estudiante") %>' />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="nombreE" ErrorMessage="Nombre es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+                    
+                    <label class="lab col-sm-3"><i class="fas fa-address-card"></i>Rut Estudiante:</label>
+                    <asp:TextBox ID="rut_estudianteTextBox" CssClass="col-sm-3" runat="server" Text='<%# Bind("rut_estudiante") %>' />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="rutEstudiante" ErrorMessage="Rut es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+                    </div>
+                    
                     <br />
-                    apellido_p:
-                    <asp:TextBox ID="apellido_pTextBox" runat="server" Text='<%# Bind("apellido_p") %>' />
+                    <div class="row">
+                    <label class="lab col-sm-3"><i class="fas fa-user"></i>Apellido Paterno:</label>
+                    <asp:TextBox ID="TextBox1" CssClass="col-sm-3" runat="server" Text='<%# Bind("apellido_p") %>' />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="apellidoPaternoE" ErrorMessage="Apellido paterno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+
+                    <label class="lab col-sm-3"><i class="fas fa-user"></i>Apellido Materno:</label>
+                    <asp:TextBox ID="apellido_aTextBox" CssClass="col-sm-3" runat="server" Text='<%# Bind("apellido_a") %>' />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="apellidoMaternoE" ErrorMessage="Apellido materno es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+                    </div>
+
                     <br />
-                    apellido_a:
-                    <asp:TextBox ID="apellido_aTextBox" runat="server" Text='<%# Bind("apellido_a") %>' />
+                    <div class="row">
+                    <label class="lab col-sm-3"><i class="fas fa-envelope"></i>Email Estudiante:</label>
+                    <asp:TextBox ID="email_estudianteTextBox" CssClass="col-sm-3" runat="server" Text='<%# Bind("email_estudiante") %>' />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="emailEstudiante" ErrorMessage="Email es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+
+                    <label class="lab col-sm-3"><i class="fas fa-phone-square"></i>Fono Estudiante:</label>
+                    <asp:TextBox ID="fono_estudianteTextBox" CssClass="col-sm-3" runat="server" Text='<%# Bind("fono_estudiante") %>' />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="telefonoEstudiante" ErrorMessage="Telefono es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+                    </div>
+                    
                     <br />
-                    rut_estudiante:
-                    <asp:TextBox ID="rut_estudianteTextBox" runat="server" Text='<%# Bind("rut_estudiante") %>' />
-                    <br />
-                    email_estudiante:
-                    <asp:TextBox ID="email_estudianteTextBox" runat="server" Text='<%# Bind("email_estudiante") %>' />
-                    <br />
-                    fono_estudiante:
-                    <asp:TextBox ID="fono_estudianteTextBox" runat="server" Text='<%# Bind("fono_estudiante") %>' />
-                    <br />
-                    dir_estudiante:
-                    <asp:TextBox ID="dir_estudianteTextBox" runat="server" Text='<%# Bind("dir_estudiante") %>' />
-                    <br />
-                    hab_estudiante:
-                    <asp:TextBox ID="hab_estudianteTextBox" runat="server" Text='<%# Bind("hab_estudiante") %>' />
-                    <br />
-                    id_usuario:
-                    <asp:TextBox ID="id_usuarioTextBox" runat="server" Text='<%# Bind("id_usuario") %>' />
-                    <br />
-                    id_carrera:
-                    <asp:TextBox ID="id_carreraTextBox" runat="server" Text='<%# Bind("id_carrera") %>' />
-                    <br />
+                    <div class="row">
+                        <div class="col-sm-6">
+                        <asp:HiddenField ID="id_usuarioTextBox" runat="server" Value='<%# Bind("id_usuario") %>' />
+                        <label class="lab col-sm-3"><i class="fas fa-home"></i>Dirección Estudiante:</label>
+                        <asp:TextBox ID="dir_estudianteTextBox" CssClass="col-sm-3" runat="server" Text='<%# Bind("dir_estudiante") %>' />
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="direccionEstudiante" ErrorMessage="Direccion es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:Label runat="server" CssClass="lab col-sm-3">Carrera:</asp:Label> 
+                        <asp:TextBox ID="TextBox2" CssClass="form-control col-sm-3" runat="server" Text='<%# Bind("id_carrera") %>' />
+                        </div>
+                        
+                        <div class="col-sm-6">
+                        <label class="lab col-sm-6"><i class="fas fa-comment-alt"></i>Comentario:</label>
+                        <asp:TextBox ID="hab_estudianteTextBox" CssClass="form-control col-sm-6" runat="server" Text='<%# Bind("hab_estudiante") %>' />
+                        </div>
+                    </div>
                     <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Actualizar" />
                     &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
+                    
                 </EditItemTemplate>
                 <EditRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
                 <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
@@ -112,7 +132,7 @@
                     <asp:TextBox ID="dir_estudianteLabel" runat="server" Text='<%# Bind("dir_estudiante") %>' />
                     <br />
                     hab_estudiante:
-                    <asp:TextBox ID="hab_estudianteLabel" runat="server" Text='<%# Bind("hab_estudiante") %>' />
+                    <asp:TextBox ID="hab_estudianteLabel" runat="server" Text='<%# Bind("hab_estudiante") %>' Height="100px" />
                     <br />
                     id_usuario:
                     <asp:TextBox ID="id_usuarioLabel" runat="server" Text='<%# Bind("id_usuario") %>' />
