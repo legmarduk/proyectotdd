@@ -11,18 +11,20 @@ namespace proyectoTallerDD.app.forms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*try catch*/
+            
+            /*try catch
             try
             {
                 int idConectada = (int)Session["identificador"];
 
-                aaaaa.Value = idConectada.ToString() ;
+                aaaaa.Value = idConectada.ToString();
+                
             }
             catch (Exception error)
             {
                 Response.Redirect("login.aspx");
-            }
-
+            }*/
+            
         }
     }
 }
