@@ -32,6 +32,7 @@
     </div>
     </header>
     <div class="container">
+     <asp:HiddenField ID="idUsuario" runat="server" />
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-3">
@@ -79,6 +80,33 @@
         </div>
         <div class="col-sm-2"></div>
         </div>
+        <br/>
+        <div class="container">
+		
+		<div class="row">
+			<div class="col-md">
+				<div class="card">
+					<div class="card-header">
+						<div class="d-flex bd-highlight">
+  							<div class="p-2 flex-grow-1 bd-highlight"><h5 class="card-tittle"><i class="fas fa-location-arrow"></i> Ofrerta de practica </h5></div>
+  							<div class="p-2 bd-highlight"></div>
+  							<div class="p-2 bd-highlight"><i class="far fa-newspaper"></i></div>
+						</div>
+					</div>
+					<div class="card-body">
+						<p class="card-text"><label><i class="fas fa-comments"></i> Commentario:</label> oferta para informaticos que sepan java</p>
+						<p class="card-text"><label><i class="far fa-clock"></i> Horas: </label> 220 horas laborales</p>
+						<p class="card-text"><label><i class="fas fa-dollar-sign"></i>pago:</label>  40.000</p>
+    					<a href="#" class="btn btn-primary">Postula</a>
+					</div>
+					
+				</div>     
+						<br />		
+			</div>
+		</div>
+	</div>
+
+
     </div>
     </form>
 </body>

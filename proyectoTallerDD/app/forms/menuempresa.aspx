@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menu.aspx.cs" Inherits="proyectoTallerDD.app.forms.menu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menuempresa.aspx.cs" Inherits="proyectoTallerDD.app.forms.menuempresa" %>
 
 <!DOCTYPE html>
 
@@ -25,8 +25,8 @@
            <button type="button" class="btn  btn-dark btn-menu dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
             aria-expanded="false"><i class="far fa-user"></i> usuario </button>
          <div class="dropdown-menu accionMenu">
-             <a class="dropdown-item " href="perfilestudiante.aspx" ><i class="fas fa-cogs"></i>  Editar Perfil</a>
-             <a class="dropdown-item" href="#"><i class="far fa-edit"></i> Mis Postulaciones</a>
+             <a class="dropdown-item " href="perfilempresa.aspx" ><i class="fas fa-cogs"></i>  Editar Perfil</a>
+             <a class="dropdown-item" href="#"><i class="far fa-edit"></i> Postulantes</a>
              <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Cerrar sesion</a>
          </div>
     </div>

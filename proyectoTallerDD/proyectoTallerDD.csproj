@@ -86,6 +86,8 @@
     <Content Include="app\forms\home.aspx" />
     <Content Include="app\forms\login.aspx" />
     <Content Include="app\forms\menu.aspx" />
+    <Content Include="app\forms\menuempresa.aspx" />
+    <Content Include="app\forms\perfilempresa.aspx" />
     <Content Include="app\forms\perfilestudiante.aspx" />
     <Content Include="app\forms\test.aspx" />
     <Content Include="app\Images\back.png" />
@@ -380,6 +382,20 @@
     </Compile>
     <Compile Include="app\forms\buscar.aspx.designer.cs">
       <DependentUpon>buscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\forms\menuempresa.aspx.cs">
+      <DependentUpon>menuempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\menuempresa.aspx.designer.cs">
+      <DependentUpon>menuempresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="app\forms\perfilempresa.aspx.cs">
+      <DependentUpon>perfilempresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="app\forms\perfilempresa.aspx.designer.cs">
+      <DependentUpon>perfilempresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="app\forms\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>

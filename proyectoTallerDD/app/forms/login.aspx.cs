@@ -29,11 +29,30 @@ namespace proyectoTallerDD.app.forms
 
                            
             conn.Close();
-           
+
             if (temp != 0)
             {
                 Session["identificador"] = temp;/*aca se crea la variable de sesion*/
-                Response.Redirect("menu.aspx");
+
+
+                conn.Open();
+
+                String query = "EXEC dbo.TipoCuenta" + "'"+ temp + "'";
+
+                //Response.Write(query);
+                SqlCommand com2 = new SqlCommand(query, conn);
+                int tipo = Convert.ToInt32(com2.ExecuteScalar().ToString());
+
+                Response.Write(tipo);
+               if (tipo == 1)
+                {
+                    Response.Redirect("menu.aspx");
+                }
+                else
+                {
+                    Response.Redirect("menuempresa.aspx");
+                }
+                
 
                 //FormsAuthentication.RedirectFromLoginPage(nombreUsuario.Text, false);
             }

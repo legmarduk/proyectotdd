@@ -14,36 +14,24 @@
 <link href="../Styles/styleMenu.css" rel="stylesheet" />
 
 
-
-
 </head>
 <body>
-    <header id="header">
-    <div class="inner">
-        <a href="home.aspx" class="logo"><i class="fas fa-hands-helping"></i> Practicando.cl</a>
-    </div>    
-    </header>
-
-
-    <form id="form1"  runat="server" method="post" a>
+    
+    <form id="form1"  runat="server" method="post" >
             
-       
-
      <div class="d-flex justify-content-around">
           <h1>DATOS ESTUDIANTE</h1>
                     
      </div>
 
-
-
     <br />
             <asp:ValidationSummary runat="server" HeaderText="" DisplayMode="BulletList" CssClass="alert alert-danger"/>
         <div class="container">
 		<div class="row panelForm">
-			<div class="col-md-6"> <!--seccion izquierda-->
+			<div class="col-md-6"> <!--seccion izquierda -->
 				<div class="form-group">
 					<label class="lab"><i class="fas fa-user"></i> Nombre</label>
-					<asp:TextBox id="nombreE" runat="server" CssClass="form-control"   />
+                    <asp:TextBox id="nombreE" runat="server" CssClass="form-control"   />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="nombreE"
                                 ErrorMessage="Nombre es Campo Obligatorio" Display="None"></asp:RequiredFieldValidator>
 				</div>
@@ -136,8 +124,6 @@
 		</div>
 		
 	</div>
-        <asp:HiddenField runat="server" ID="session" ></asp:HiddenField>
-    </form>
-</body>
 
+    </form>
 </html>

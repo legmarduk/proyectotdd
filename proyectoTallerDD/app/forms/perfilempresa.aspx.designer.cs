@@ -10,7 +10,7 @@
 namespace proyectoTallerDD.app.forms {
     
     
-    public partial class perfilestudiante {
+    public partial class perfilempresaaspx {
         
         /// <summary>
         /// Control form1.
@@ -22,103 +22,58 @@ namespace proyectoTallerDD.app.forms {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control nombreE.
+        /// Control nombreEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombreE;
+        protected global::System.Web.UI.WebControls.TextBox nombreEmpresa;
         
         /// <summary>
-        /// Control apellidoPaternoE.
+        /// Control telefonoEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox apellidoPaternoE;
+        protected global::System.Web.UI.WebControls.TextBox telefonoEmpresa;
         
         /// <summary>
-        /// Control apellidoMaternoE.
+        /// Control direccionEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox apellidoMaternoE;
+        protected global::System.Web.UI.WebControls.TextBox direccionEmpresa;
         
         /// <summary>
-        /// Control rutEstudiante.
+        /// Control mailEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox rutEstudiante;
+        protected global::System.Web.UI.WebControls.TextBox mailEmpresa;
         
         /// <summary>
-        /// Control seleccionArea.
+        /// Control rubroEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList seleccionArea;
+        protected global::System.Web.UI.WebControls.TextBox rubroEmpresa;
         
         /// <summary>
-        /// Control DropDownList1.
+        /// Control descripcionEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-        
-        /// <summary>
-        /// Control SqlDataSource1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// Control emailEstudiante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailEstudiante;
-        
-        /// <summary>
-        /// Control telefonoEstudiante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox telefonoEstudiante;
-        
-        /// <summary>
-        /// Control direccionEstudiante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox direccionEstudiante;
-        
-        /// <summary>
-        /// Control comentarioEstudiante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox comentarioEstudiante;
+        protected global::System.Web.UI.WebControls.TextBox descripcionEmpresa;
         
         /// <summary>
         /// Control enviarForm.

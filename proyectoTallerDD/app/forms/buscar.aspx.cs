@@ -15,12 +15,12 @@ namespace proyectoTallerDD.app.forms
             try
             {
                 int idConectada = (int)Session["identificador"];
+                idUsuario.Value = idConectada.ToString() ;
             }
             catch (Exception error)
             {
                 Response.Redirect("login.aspx");
             }
-
         }
     }
 }

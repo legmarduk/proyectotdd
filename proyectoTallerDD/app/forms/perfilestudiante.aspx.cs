@@ -16,25 +16,26 @@ namespace proyectoTallerDD.app.forms
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*try catch*/
-            try
+            if(!IsPostBack)
             {
-                int idConectada = (int)Session["identificador"];
+                    /*try catch*/
+                try
+                {
+                    int idConectada = (int)Session["identificador"];
               
-               /* session.Value = idConectada.ToString();
-                cargar(idConectada);*/
-            }
-            catch (Exception error)
-            {
-                Response.Redirect("login.aspx");
+                    cargar(idConectada);
+                }
+                catch (Exception error)
+                {
+                    Response.Redirect("login.aspx");
+                }
             }
 
         }
 
 
-        protected void ModificarPerfilEstudiante(object sender, EventArgs e)
+       protected void ModificarPerfilEstudiante(object sender, EventArgs e)
         {
-           
             String nombre = nombreE.Text;
             String apellidoP = apellidoPaternoE.Text;
             String apellidoM = apellidoMaternoE.Text;
@@ -44,7 +45,7 @@ namespace proyectoTallerDD.app.forms
             String direccion = direccionEstudiante.Text;
             String comentario = comentarioEstudiante.Text;
             String drop = DropDownList1.Text;
-            
+
             int idConectada = (int)Session["identificador"];
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conexionDB"].ConnectionString);
@@ -59,17 +60,20 @@ namespace proyectoTallerDD.app.forms
             conn.Close();
             if (respuesta == 1)
             {
-                Response.Write(query.ToString());
-                
-                //Response.Redirect("menu.aspx");
+                //Response.Write(query.ToString());
+
+                Response.Write("<script> Los datos fueron actualizados correctamente </script>");
             }
-            else {
-                Response.Write("no funciona esta wea ");
+            else
+            {
+                Response.Write("<script>Fallo al Actualizar los datos </script>");
             }
- 
+
+
+
         }
 
-    /*    private void cargar(int id)
+        private void cargar(int id)
         {
 
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["conexionDB"].ConnectionString);
@@ -80,7 +84,7 @@ namespace proyectoTallerDD.app.forms
 
             if (dr.Read())
             {
-                
+              
                 nombreE.Text = (Convert.ToString(dr["nombre_estudiante"]));
                 rutEstudiante.Text = (Convert.ToString(dr["rut_estudiante"]));
                 apellidoPaternoE.Text = (Convert.ToString(dr["apellido_p"]));
@@ -93,7 +97,7 @@ namespace proyectoTallerDD.app.forms
             }
 
             conn.Close();
-        }*/
+        }
 
     }
 }

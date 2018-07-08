@@ -119,3 +119,67 @@ BEGIN
 	/*END*/
 
 END
+
+
+
+/******* POSTULACION *******/
+INSERT INTO Usuarios (nombre_usuario,key_usuario,fecha_registro) VALUES('empresaprueba','123',GETDATE())
+
+select * from Empresas
+
+INSERT INTO Empresas(nombre_empresa,fono_empresa,dir_empresa,mail_empresa,rubro_empresa,desc_empresa,
+id_usuario) Values('EmpresaPrueba',5684351,'dirEmpresa 1111 thno','empresa@empresa.cl','informatica',
+'empresa que trabaja en proyectos web',10)
+
+INSERT INTO Publicaciones(titulo_publicacion,desc_publicacion,pago,requerimientos,horas,compatibilidad,
+fecha_publicacion,id_empresa) VALUES('Practica Informatica','necesitamos gente que quiera trabajar 
+en desarrollo etc',60.000,'Java',260,1,GETDATE(),1)
+
+SELECT * FROM Publicaciones
+
+
+/*procedimiento de la postulacion */
+
+ALTER PROCEDURE dbo.PostulacionPractica(@id_usuario int, @id_publicacion int)
+as
+BEGIN 	
+/*procedimiento se hace con la id del estudiante*/
+/*con id_publicacion podemos tener id_empresa y todos los datos*/
+		DECLARE @id_estudiante int
+
+		SET @id_estudiante = (SELECT id_estudiante FROM Estudiantes  WHERE id_usuario = @id_usuario);
+
+		if exists (SELECT TOP 1 1 FROM Postulaciones where id_estudiante = @id_estudiante 
+			AND id_publicacion = @id_publicacion)
+		BEGIN
+			SELeCT 0;
+ 			return 0;  /*ya postulo a la publicacion*/
+		END
+
+		INSERT INTO Postulaciones(fecha_postulacion, id_estado, id_publicacion,id_estudiante) VALUES 
+		(GETDATE(),1,@id_publicacion,@id_estudiante);
+		
+			SELECT 1;
+			return 1; /*es 1 es para ver que si se postulo*/
+END
+
+EXEC dbo.PostulacionPractica 9,1
+SELECT * FROM Postulaciones
+DELETE FROM Postulaciones where id_postulacion = 3
+
+/**************/
+ALTER PROCEDURE dbo.TipoCuenta (@id int)
+AS
+BEGIN 
+	
+	if exists(SELECT TOP 1 1 FROM Estudiantes where id_usuario=@id)
+	BEGIN
+
+		select 1;
+		return 1;
+	END
+	
+	select 2;
+	return 2;
+	
+END

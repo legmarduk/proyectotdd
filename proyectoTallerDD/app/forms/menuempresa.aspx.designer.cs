@@ -10,7 +10,7 @@
 namespace proyectoTallerDD.app.forms {
     
     
-    public partial class menu {
+    public partial class menuempresa {
         
         /// <summary>
         /// Control form1.
