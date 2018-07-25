@@ -51,3 +51,12 @@ plubli {
     text-align: justify;
     text-shadow: -2px -2px 4px #000;
 }
+
+.contcarta {
+    width: 100%;
+    width: 80vw;
+}
+
+.botondetalle {
+    margin-left: 10px;
+}
